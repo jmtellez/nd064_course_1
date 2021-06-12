@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello():
     return "Hello World!"
 
-
+# Health-check endpoint
 @app.route("/status")
 def healthCheck():
     response = {
@@ -20,7 +20,7 @@ def healthCheck():
         mimetype='application/json'
     )
 
-
+# Metrics endpoint
 @app.route("/metrics")
 def metrics():
     response = {
